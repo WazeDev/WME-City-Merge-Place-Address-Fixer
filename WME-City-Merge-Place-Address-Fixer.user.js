@@ -50,7 +50,7 @@
 
     function checkForAddress()
     {
-        if(W.selectionManager.hasSelectedFeatures())
+        if(W.selectionManager.hasSelectedFeatures() && W.selectionManager.getSelectedFeatures()[0].model.type =="venue")
         {
             var venue = W.selectionManager.getSelectedFeatures()[0].model.attributes;
             var link = {};
