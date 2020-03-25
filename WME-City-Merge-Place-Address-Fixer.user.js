@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WME City Merge Place Address Fixer
 // @namespace    https://greasyfork.org/users/32336-joyriding
-// @version      2019.11.09.01
+// @version      2020.03.25.01
 // @description  Helps fix the address on places missing an address in WME after a city name merge
 // @author       Joyriding
 // @include      https://beta.waze.com/*
@@ -39,7 +39,7 @@
     {
         console.log('Place address fixer init');
         let updateDesc = 'Initial release.<br><br>';
-        WazeWrap.Interface.ShowScriptUpdate('City Merge Place Address Fixer', GM_info.script.version, updateDesc);
+        //WazeWrap.Interface.ShowScriptUpdate('City Merge Place Address Fixer', GM_info.script.version, updateDesc);
 
         W.selectionManager.events.register("selectionchanged", null, checkForAddress);
         if(W.selectionManager.hasSelectedFeatures())
