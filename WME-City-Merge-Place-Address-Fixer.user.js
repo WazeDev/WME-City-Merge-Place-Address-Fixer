@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WME City Merge Place Address Fixer
 // @namespace    https://greasyfork.org/users/32336-joyriding
-// @version      2020.03.25.01
+// @version      2020.05.27.01
 // @description  Helps fix the address on places missing an address in WME after a city name merge
 // @author       Joyriding
 // @include      https://beta.waze.com/*
@@ -14,7 +14,7 @@
 // ==/UserScript==
 
 /* global W */
-/* global OL */
+/* global OpenLayers */
 /* global $ */
 /* golbal _ */
 /* global WazeWrap */
@@ -55,7 +55,7 @@
             var venue = W.selectionManager.getSelectedFeatures()[0].model.attributes;
             var link = {};
 
-            var venuePt = new OL.Geometry.Point(0,0);
+            var venuePt = new OpenLayers.Geometry.Point(0,0);
 
             if (venue.entryExitPoints.length > 0)
             {
